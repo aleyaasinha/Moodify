@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+     <header>
+       <a href="#"><img  class="logo" src="Grey Circle Script Creative Studio Logo.png"></a>
+       <ul>
+           <li><a href="#" class="active">Home</a></li>
+           <li><a href="Team.html">Team</a></li>
+           <li><a href="contact.html">Contact</a></li>
+       </ul>
+   </header>
+   <section>
+       <img src="stars.png" id="stars">
+       <img src="moon.png" id="moon">
+       <img src="mountains_behind.png" id="mountains_behind">
+       <h2 id="text">Moodify</h2>
+       <a href="option.html" id="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            EXPLORE
+        </a>
+       <img src="mountains_front.png" id="mountains_front">
+   </section>
+   <div class="sec">
+       <h2>What is Moodify ?</h2>
+       <p>
+        Having a bad day?
+        Fix it! Listen to some soothing music, calm your mind, check out moodify. In moodify you can choose your own playlist based on your mood. Moodify will match you with the playlist that you require at that moment.
+        Bored at home? Let’s go for a run! Open modify to get your workout songs to keep you motivated.<br> <br>
+        Having a bad breakup? Turn on moodify’s party playlist and chill with a pizza.
+        Planning a road trip? Plan your playlist wisely with moodify!
+        Stop spending hours getting the perfect song to match your mood, search no more, Moodify is the one stop solution for your mood playlists. <br> <br>
+        Moodify can read your mind, just answer a few questions or select your mood emoji and get your ideal playlist in one step.<br><br><br>
+        <center><h3 class="glow">
+            So what are you waiting for?<br>
+            Try out moodify and get lost in the word of music!<br><br>
+        </h3></center>
+
+       </p>
+   </div>
+  
+   <script>
+       let stars = document.getElementById('stars');
+       let moon = document.getElementById('moon');;
+       let mountains_behind = document.getElementById('mountains_behind');
+       let text = document.getElementById('text');
+       let mountains_front = document.getElementById('mountains_front');
+       let header = document.querySelector('header');
+      
+       window.addEventListener('scroll',function(){
+           let value = window.scrollY;
+           stars.style.left = value*0.25 + 'px';
+           moon.style.top = value*1.08 + 'px';
+           mountains_behind.style.top = value*0.5 + 'px';
+           mountains_front.style.top = value*0 + 'px';
+           text.style.marginRight = value*4 + 'px';
+           text.style.marginTop = value*1.5 + 'px';
+           btn.style.marginTop = value*1.5 + 'px';
+           header.style.top = value*0.5 + 'px';
+       })
+   </script>
+</body>
+</html>

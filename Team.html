@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+        #head {
+            color: #fff;
+            font-family: 'Gruppo', cursive;
+            font-size: 300%;
+            text-align: center;
+            padding-top: 100px;
+            letter-spacing: 1px;
+        }
+
+        body {
+            margin: 0;
+            overflow: visible;
+            height: 100%;
+            /*font-family: 'Roboto', sans-serif;*/
+            background: #1c0522;
+            /*font-family: Helvetica, Arial, sans-serif;*/
+            font-family: 'Gruppo', cursive;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        .strip {
+            position: absolute;
+            height: 200vh;
+            background: #fff;
+            width: 0.0625rem;
+            opacity: .3;
+        }
+
+        .one {
+            left: 25%;
+        }
+
+        .two {
+            left: 50%;
+        }
+
+        .three {
+            left: 75%;
+        }
+
+        .container {
+
+            align-items: flex-start;
+            display: flex;
+            justify-content: center;
+            padding: 10.875rem 1.5rem;
+            flex-flow: row wrap;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .card-grid {
+
+            display: grid;
+            grid-column-gap: 1.5rem;
+            max-width: 85rem;
+            width: 100%;
+            margin-top: -100px;
+        }
+
+        @media(min-width: 75rem) {
+            .card-grid {
+                grid-template-columns: repeat(7, 1fr);
+            }
+        }
+
+        .card {
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            display: block;
+            padding-bottom: 150%;
+        }
+
+        .card-background {
+            background-size: cover;
+            background-position: center;
+            border-radius: 50px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: filter .2s linear, transform 200ms linear;
+        }
+
+        .card:hover .card-background {
+            transform: scale(1.35) translateZ(0);
+            transition-delay: 0.5s;
+        }
+
+        .card-grid:hover>.card:not(:hover) .card-background {
+            filter: brightness(1) saturate(0) contrast(1) blur(1.25rem);
+            transition-delay: 0.5s;
+
+        }
+
+        .card-content {
+            padding: 16.375rem 1.25rem;
+            position: absolute;
+            top: 0;
+
+
+        }
+
+        .card-category {
+            color: rgba(255, 255, 255, .5);
+            font-size: .9rem;
+            text-transform: capitalize;
+            padding-top: 10px;
+        }
+
+        .card-heading {
+            color: rgba(255, 255, 255, .9);
+            font-size: 1.5rem;
+            text-shadow: 0.125rem 0.125rem 1.25rem rgba(0, 0, 0, .2);
+            padding-top: 20px;
+        }
+
+        p {
+            margin-top: -1.875rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="strip one"></div>
+        <div class="strip two"></div>
+        <div class="strip three"></div>
+    </div>
+
+    <div id="head">TEAM MOODIFY</div>
+
+    <section class="container">
+        <div class="card-grid">
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(Aleyaa.jpeg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Aleyaa Sinha</h3>
+                    <p class="card-category">
+                        Graphic designer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(tuhin.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Tuhin <br>Paul</h3>
+                    <p class="card-category">
+                        Photographer, Designer, Developer, Producer, Gamer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(Priyam.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Priyam Chakraborty</h3>
+                    <p class="card-category">
+                        Intermediate Web developer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(IMG-20210717-WA0026.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Anindita Sarkar</h3>
+                    <p class="card-category">
+                        Playlist Designer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background"
+                    style="background-image: url(WhatsApp\ Image\ 2021-11-02\ at\ 9.29.33\ PM.jpeg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Yashvi Agarwal</h3>
+                    <p class="card-category">
+                        Designer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(Lipi.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Swarolip Chakraborty</h3>
+                    <p class="card-category">
+                        Presentation Designer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(Sayan.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Sayan Chakraborty</h3>
+                    <p class="card-category">
+                        Contact page developer
+                    </p>
+                </span>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>
