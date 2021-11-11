@@ -19,30 +19,34 @@
         <div class="contact-box">
             <div class="contact-left">
                 <h3>Send your request</h3>
-                <form>
-                    <div class="input-row">
+                <form method ="post" data-netlify="true" action="/success">
+                    <div class="field half">
                         <div class="input group">
                             <label>Name</label>
-                            <input type="text" placeholder="Jhon Amendo">
+                            <input type="text" name="name" id="name">
                         </div>
                         <div class="input-group">
                             <label>Phone</label>
-                            <input type="text" placeholder="+1 412 520 3231">
+                            <input type="text" name="phone" id="phone">
                         </div>
                     </div> 
                     <div class="input-row">
                         <div class="input-group">
                             <label>Email</label>
-                            <input type="email" placeholder="Jhonamendo@gmail.com">
+                            <input type="email" name="email" id="email"">
                         </div>
                         <div class="input-group">
                             <label>Subject</label>
-                            <input type="text" placeholder="Product Demo">
+                            <input type="text" name="subject" id="subject">
                         </div>
                     </div>
                     <label>Message</label>
-                    <textarea rows="5" placeholder="Your message"></textarea>
-                    <button type="submit">SEND</button>
+                    <textarea rows="5" name="message" id="message"></textarea>
+                    <ul class="actions">
+                <li><input type="submit" value="Send Message"
+                class="primary" /></li>
+                <li><input type="reset" value="Clear" /></li>
+                </ul>          
                 </form>
             </div>
             <div class="contact-right">
